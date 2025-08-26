@@ -11,10 +11,13 @@
 
 const firstName = "Carlos";
 const lastName = "Stevenson";
-const thisYear = 1965;
+let thisYear = 1965;
 const birthYear = 1947;
 
-greeting = `Hello! My name is ${firstName} ${lastName} and I am ${thisYear - birthYear} years old.`
+const fullName = firstName + " " + lastName;
+let age = thisYear - birthYear;
+
+greeting = `Hello! My name is ${fullName} and I am ${age} years old.`
 
 // Do not change this
 module.exports = {
