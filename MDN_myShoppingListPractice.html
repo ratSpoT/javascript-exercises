@@ -31,10 +31,34 @@
 
     <script>
       const list = document.querySelector("ul");
-
       const form = document.querySelector("input");
-
       const btn = document.querySelector("button");
+
+      btn.addEventListener("click", () => {
+        // get current input from form
+        const input = form.value;
+
+        // clear the form
+        form.textContent = "";
+
+        const listItem = document.createElement("li");
+        const span = document.createElement("span");
+        const newBtn = document.createElement("button");
+
+        listItem.appendChild(span);
+        listItem.appendChild(newBtn);
+
+        span.textContent = input;
+        newBtn.textContent = "Delete";
+
+        list.appendChild(listItem);
+
+        newBtn.addEventListener("click", () => {
+          listItem.remove();
+        })
+
+        form.focus();
+      });
 
     </script>
   </body>
